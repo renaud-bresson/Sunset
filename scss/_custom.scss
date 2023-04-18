@@ -1,0 +1,306 @@
+.fancy {
+    order: 2;
+    color: $sandyellow;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* font-size: clamp(3rem, 10vw, 6rem); */
+    line-height: 0.75em;
+    text-align: center;
+    text-shadow: 3px 1px 1px $seablue, 2px 2px 1px #000000, 4px 2px 1px #000000, 3px 3px 1px $seablue, 5px 3px 1px,
+        4px 4px 1px $twilightorange, 6px 4px 1px $twilightorange, 5px 5px 1px $twilightorange,
+        7px 5px 1px $twilightorange, 6px 6px 1px $twilightorange, 8px 6px 1px $twilightorange, 7px 7px 1px $seablue,
+        9px 7px 1px $seablue;
+}
+
+// Colors
+$text-light: #fff;
+$text-dark: #666;
+
+$smoke: #f9f9fa;
+
+$navy-blue: #42509e;
+
+$seablue: #2086d8;
+$sandyellow: #e7bd35;
+$twilightorange: #d7495e;
+
+//!!!!!!!!!!!
+
+body {
+    background-image: url("../images/Sea\ of\ Clouds.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+*::placeholder {
+    color: $sandyellow;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px $twilightorange;
+    background-color: $twilightorange;
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+    background-color: $sandyellow;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $sandyellow;
+    border: black;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 10vw;
+    height: 20vh;
+    border-radius: 50%;
+}
+.screen {
+    background: linear-gradient(90deg, $sandyellow, $sandyellow);
+    position: relative;
+    height: 100%;
+    width: 30%;
+    box-shadow: 10px 12px 24px black;
+}
+
+.screen__content {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+}
+
+.screen__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+}
+
+.screen__background__shape {
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.screen__background__shape1 {
+    height: 520px;
+    width: 520px;
+    background: $seablue;
+    top: -50px;
+    right: 120px;
+    border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+    height: 220px;
+    width: 220px;
+    background: $twilightorange;
+    top: -172px;
+    right: 0;
+    border-radius: 32px;
+}
+
+.screen__background__shape3 {
+    height: 540px;
+    width: 190px;
+    background: linear-gradient(270deg, $twilightorange, $sandyellow);
+    top: -24px;
+    right: 0;
+    border-radius: 32px;
+}
+
+.screen__background__shape4 {
+    height: 400px;
+    width: 200px;
+    background: linear-gradient(270deg, $twilightorange, $sandyellow);
+    top: 420px;
+    right: 50px;
+    border-radius: 60px;
+}
+
+.login {
+    width: 70%;
+    padding: 30px;
+    padding-top: 70px;
+}
+
+.login__field {
+    padding: 20px 0px;
+    position: relative;
+}
+
+.login__icon {
+    position: absolute;
+    top: 30px;
+    color: $sandyellow;
+}
+
+.login__input {
+    border: none;
+    border-bottom: 2px solid #d1d1d4;
+    background: none;
+    padding: 10px;
+    padding-left: 24px;
+    font-weight: 700;
+    width: 75%;
+    transition: 0.2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+    outline: none;
+    border-bottom-color: $twilightorange;
+}
+
+.login__submit {
+    background: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1px solid #d4d3e8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: $sandyellow;
+    box-shadow: 0px 2px 2px #5c5696;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+    border-color: #6a679e;
+    outline: none;
+}
+
+.button__icon {
+    font-size: 24px;
+    margin-left: auto;
+    color: $sandyellow;
+}
+
+.back-to-register {
+    margin-top: 5%;
+}
+
+.register {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 1.25rem;
+    background: $seablue;
+    color: $sandyellow;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+    box-shadow: 10px 12px 24px black;
+}
+
+.social-login {
+    position: absolute;
+    height: 140px;
+    width: 160px;
+    text-align: center;
+    bottom: 0px;
+    right: 0px;
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-login__icon {
+    padding: 20px 10px;
+    color: $twilightorange;
+    text-decoration: none;
+    text-shadow: 0px 0px 8px #7875b5;
+}
+
+.social-login__icon:hover {
+    transform: scale(1.5);
+}
+@media (max-width: 900px) {
+    .screen {
+        height: 100%;
+        width: 100%;
+    }
+    .login {
+        width: 100%;
+    }
+}
+
+
+// Renaud RankingStars Div
+#stars {
+    position: relative;
+  }
+  
+.dummy {
+    display: none !important;
+  }
+  
+  /* The radio buttons still take up space, but are invisible */
+  .star_layer input {
+    opacity: 0;
+  }
+  
+  /* Make everything the right size */
+  .star_layer input, .star_layer label, .star_layer i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+  }
+  
+  /* Position the labels over their associated input elements */
+  .star_layer label {
+    position: absolute;
+    top: 0;
+    margin: 2px 2px 2px -22px;
+    overflow: hidden;
+  }
+  
+  /* Hides the filled stars that appear after the checked radio button */
+  input:checked ~ label > i:first-child {
+    display: none;
+  }
+  
+  /* Explicitly redisplays the filled star for the active radio button */
+  input:checked + label > i:first-child {
+    display: inline-block;
+  }
+  
+  /* Make the filled stars gold... */
+  .fas {
+    color: goldenrod;
+  }
+  
